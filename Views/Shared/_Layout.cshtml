@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!------------------------------------------------>
+    @*Start Header*@
+
+
+
+    @*HTML Tags*@
+
+    @* <Center>
+        <div class="mt-5">
+            <a href="/Home/Index" class="btn btn-danger">Home</a>
+            <a href="/Home/AboutUs" class="btn btn-primary">About Us</a>
+            <a href="/Home/ContactUs" class="btn btn-success">Contact Us</a>
+            <a href="/Home/Privacy" class="btn btn-warning">Privacy</a>
+    </Center>
+    </div> *@
+
+
+    @*HTML Helper*@
+ 
+   @*  <center>
+      <nav class="mt-5">
+            @Html.ActionLink("Home", "Index", "Home", null ,new {@class ="btn btn-primary"} )
+            @Html.ActionLink("AboutUs", "AboutUs", "Home", null ,new {@class ="btn btn-danger"} )
+            @Html.ActionLink("ContactUs", "ContactUs", "Home", null, new {@class = "btn btn-success"} )
+            @Html.ActionLink("Privacy", "Privacy", "Home", null, new {@class = "btn btn-warning"} )
+        </nav>
+    </center> *@
+
+
+
+        @*Tag Helper
+            ================================= > {RECOMMENDED}
+        *@       
+
+    <center>
+        <nav class="mt-5">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-danger">Home</a>
+            <a asp-controller="Home" asp-action="AboutUs" class="btn btn-primary">About Us</a>
+            <a asp-controller="Home" asp-action="ContactUs" class="btn btn-success">Contact Us</a>
+            <a asp-controller="Home" asp-action="Privacy" class="btn btn-warning">Privacy</a>
+        </nav>
+    </center>
+
+
+
+    @*End Header*@
+    <!------------------------------------------------>
+
+    <!------------------------------------------------>
+    <div class="bg-success">
+        @RenderBody()
+    </div>
+    <!------------------------------------------------>
+    @*Start Footer*@
+    <Center>
+        <div class="mt-5">
+            <p>Copyrights &copy; Route @DateTime.Now.Year</p>
+        </div>
+    </Center>
+    @*End Footer*@
+    <!------------------------------------------------>
+
+
+
+
+</body>
+</html>
