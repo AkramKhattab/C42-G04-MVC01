@@ -23,7 +23,6 @@ namespace C42_G04_MVC01
 
              // Configure The HTTP pipeline
 
-
              //app.MapGet("/", () => "Hello World!");
              //app.MapGet("/hamada", () => "Hello hamada!");
              //app.MapGet("/signin", signin);
